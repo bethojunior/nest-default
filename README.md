@@ -43,7 +43,8 @@ Certifique-se de ter as seguintes ferramentas instaladas no seu sistema antes de
 - Banco de Dados [MYSQL] [PGSQL]
 
 <hr>
-## Configuração
+
+## Configurações
 
 Siga estas etapas para configurar e executar o projeto:
 
