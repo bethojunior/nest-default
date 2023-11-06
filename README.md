@@ -53,7 +53,7 @@ Siga estas etapas para configurar e executar o projeto:
    git clone https://github.com/bethojunior/nest-default.git
    cd nest-default
 
-2. **Rodar Scripts
+2. **Rodar Scripts**
 
     ```bash
    npm install
