@@ -5,7 +5,7 @@
 
 # Projeto base em Nest.js
 
-Esse projeto é estruturado com a arquitetura Service Repository, sendo muito fiel aos principios do # SOLID.
+Esse projeto é estruturado com a arquitetura Service Repository, sendo muito fiel aos principios do SOLID.
 Nesse projeto teremos as seguintes estrutura de diretórios: 
 
 - Http:
