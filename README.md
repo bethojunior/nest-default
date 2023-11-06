@@ -5,6 +5,28 @@
 
 # Projeto base em Nest.js
 
+Esse projeto é estruturado com a arquitetura Service Repository, sendo muito fiel aos principios do # SOLID.
+Nesse projeto teremos as seguintes estrutura de diretórios: 
+
+- Http
+  Onde voce irá gerencias as Controllers, DTO'S, Middleware, Validates e os respectivos Modules.
+  
+- Services
+  Onde você irá trabalhar a regra de negócio da aplicação.
+  
+- Repository
+  Onde você irá trabalhar com querys e regras de negócio do banco de dados, instanciando a ORM Prisma.
+
+- Providers
+  Onde você irá criar seus provedores de serviços externos
+
+- Listeners
+  Onde você vai "ouvir" metodos disparados em sua aplicação e executar ações específicas em resposta a esses eventos.
+
+- Config
+  Servem para definir e personalizar o comportamento de sua aplicação NestJs. Elas são utilizadas para armazenar informações que podem variar de aplicação para aplicação.
+
+
 Este é um projeto Nest.js utilizamos TypeScript e Prisma
 Aqui um <a href="https://www.prisma.io/docs/getting-started" target="_blank">link</a> da ORM Prisma
 
