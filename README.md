@@ -8,22 +8,22 @@
 Esse projeto é estruturado com a arquitetura Service Repository, sendo muito fiel aos principios do # SOLID.
 Nesse projeto teremos as seguintes estrutura de diretórios: 
 
-- Http
+- Http:
   Onde voce irá gerencias as Controllers, DTO'S, Middleware, Validates e os respectivos Modules.
   
-- Services
+- Services:
   Onde você irá trabalhar a regra de negócio da aplicação.
   
-- Repository
+- Repository:
   Onde você irá trabalhar com querys e regras de negócio do banco de dados, instanciando a ORM Prisma.
 
-- Providers
+- Providers:
   Onde você irá criar seus provedores de serviços externos
 
-- Listeners
+- Listeners:
   Onde você vai "ouvir" metodos disparados em sua aplicação e executar ações específicas em resposta a esses eventos.
 
-- Config
+- Config:
   Servem para definir e personalizar o comportamento de sua aplicação NestJs. Elas são utilizadas para armazenar informações que podem variar de aplicação para aplicação.
 
 
