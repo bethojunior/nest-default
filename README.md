@@ -6,6 +6,7 @@
 # Projeto base em Nest.js
 
 Esse projeto é estruturado com a arquitetura Service Repository, sendo muito fiel aos principios do SOLID e ao Clean code.
+<br>
 Nesse projeto teremos as seguintes estrutura de diretórios: 
 
 - Http:
@@ -30,6 +31,8 @@ Nesse projeto teremos as seguintes estrutura de diretórios:
 Este é um projeto Nest.js utilizamos TypeScript e Prisma
 Aqui um <a href="https://www.prisma.io/docs/getting-started" target="_blank">link</a> da ORM Prisma
 
+<hr>
+
 ## Pré-requisitos
 
 Certifique-se de ter as seguintes ferramentas instaladas no seu sistema antes de executar o projeto:
@@ -39,6 +42,7 @@ Certifique-se de ter as seguintes ferramentas instaladas no seu sistema antes de
 - Yarn (v1.22.9) opcional
 - Banco de Dados [MYSQL] [PGSQL]
 
+<hr>
 ## Configuração
 
 Siga estas etapas para configurar e executar o projeto:
@@ -48,7 +52,13 @@ Siga estas etapas para configurar e executar o projeto:
    ```bash
    git clone https://github.com/bethojunior/nest-default.git
    cd nest-default
+
+2. **Rodar Scripts
+
+    ```bash
+   npm install
    npx prisma migrate dev --name init
+   node database/seeder/_init_.ts
    nest start dev --watch
 
 
