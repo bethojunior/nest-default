@@ -57,9 +57,12 @@ Siga estas etapas para configurar e executar o projeto:
 2. **Rodar Scripts**
 
     ```bash
-   npm install
-   npx prisma migrate dev --name init
-   node database/seeder/_init_.ts
-   nest start dev --watch
+    npm install
+    npm install -g typescript
+    npm install typescript --save-dev
+    npx prisma init
+    npx prisma migrate dev --name init
+    npx ts-node _init_.ts
+    nest start dev --watch
 
 
