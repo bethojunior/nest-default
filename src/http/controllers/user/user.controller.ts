@@ -47,6 +47,13 @@ export class UserController {
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.userService.remove(id);
+    try {
+      return this.userService.destroy(id);
+    } catch (error) {
+      throw new HttpException(
+        'Failed to create user: ' + error.message,
+        HttpStatus.BAD_REQUEST,
+      );
+    }
   }
 }

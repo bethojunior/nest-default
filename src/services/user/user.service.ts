@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { UserRepository } from '../../repositories/user/userRepository';
 import { Request } from 'express';
 import { CreateUserDto } from '../../http/dto/user/create-user.dto';
@@ -13,11 +13,9 @@ export class UserService {
 
   async create(createUserDto: CreateUserDto) {
     try {
-      await this.userRepository.create(createUserDto);
-
-      await this.emailContract.sendEmail(createUserDto.email, 'Welcome', 'olá');
+      return await this.userRepository.create(createUserDto);
     } catch (error) {
-      return error.message;
+      throw new HttpException(error.message, HttpStatus.BAD_REQUEST);
     }
   }
 
@@ -33,8 +31,11 @@ export class UserService {
     return `This action updates a #${id} user ${request}`;
   }
 
-  remove(id: string) {
-    return id;
-    // return this.userRepository.destroy(id);
+  async destroy(id: string) {
+    try {
+      return await this.userRepository.destroy(id);
+    } catch (error) {
+      throw new HttpException(error.message, HttpStatus.BAD_REQUEST);
+    }
   }
 }

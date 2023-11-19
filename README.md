@@ -37,10 +37,13 @@ Aqui um <a href="https://www.prisma.io/docs/getting-started" target="_blank">lin
 
 Certifique-se de ter as seguintes ferramentas instaladas no seu sistema antes de executar o projeto:
 
+- Docker
+- Docker compose
+- Redis
 - Node.js (v20.4.0)
 - npm (v9.7.2)
 - Yarn (v1.22.9) opcional
-- Banco de Dados [MYSQL] [PGSQL]
+- Banco de Dados [PGSQL]
 
 <hr>
 
@@ -48,21 +51,15 @@ Certifique-se de ter as seguintes ferramentas instaladas no seu sistema antes de
 
 Siga estas etapas para configurar e executar o projeto:
 
-1. **Clonar o repositório:**
-
-   ```bash
-   git clone https://github.com/bethojunior/nest-default.git
-   cd nest-default
-
-2. **Rodar Scripts**
+1. **Rodar Scripts**
 
     ```bash
+    docker-compose up -d
     npm install
     npm install -g typescript
     npm install typescript --save-dev
     npx prisma init
+    npx prisma migrate dev
     npx prisma migrate dev --name init
-    npx ts-node _init_.ts
+    npx ts-node database/seeders/_init_.ts
     nest start dev --watch
-
-
